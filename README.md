@@ -22,11 +22,13 @@ Class: SI 539 Web Design
 6. Validate your code and fix errors (check on w3)
 
 - Changes:
-1. Applied grid on `contact.html` and flexbox on `works.html`
+- [x] Applied grid on `contact.html` and flexbox on `works.html`
 
 - To-Do:
-1. Add pictures on `works.html`
-2. Add downloadable resume on `biography.html`
-3. Position `about.html`
-4. Add "Back To Top" footer
-5. Add RWD 
+
+- [ ] Add pictures on `works.html`
+- [ ] Add downloadable resume on `biography.html`
+- [ ] Position `about.html`
+- [ ] Add "Back To Top" footer
+- [ ] Add RWD 
+
