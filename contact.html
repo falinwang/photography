@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="Shortcut Icon" type="image/x-icon" href="./img/roynana.png" />
+    <link rel="stylesheet" href="css/mystyle.css">
     <title>Contact Roy Wang</title>
 </head>
 
@@ -24,13 +24,14 @@
                     <li><a href="biography.html">Biography</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <a href="index.html"><img src="./img/logoroywang.png" class="navimg" alt="" title=""></a>
+                <a href="index.html"><img src="./img/logoroywang.png" class="navimg" alt="title image - Roy Wang" title=""></a>
             </nav>
         </header>
         <div class="main-container">
             <div class="icon-container">
                 <div class="contact-heading">
                     <h1>Let's Connect!</h1>
+                    <h2>Follow me</h2>
                 </div>
                 <div class="mail-icon icon">
                     <a href="mailto:falinw@umich.edu?Subject=Hello%20Roy" target="_blank">
@@ -70,24 +71,19 @@
                 </div>
             </div>
             <div class="contactform-container">
-                <form id="contact" action="none" method="post">
-                    <h3>Contact</h3>
-                    <br>
-                    <fieldset>
-                        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                    </fieldset>
-                    <fieldset>
-                        <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                    </fieldset>
-                    <fieldset>
-                        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-                    </fieldset>
-                    <fieldset class="submi">
-                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                    </fieldset>
+                <form id="contact" action="mailto:falinw@umich.edu" method="post">
+                    <h3>Contact</h3><br>
+                        <label for="name">Full Name</label><br>
+                        <input placeholder="Your name" type="text" name="name" id="name"><br>
+                        <label for="email">Email</label><br>
+                        <input placeholder="Your Email Address" type="email" name="email" id="email"><br>
+                        <label for="tel">Phone</label><br>
+                        <input placeholder="Your Phone Number (optional)" type="tel" name="tel" id="tel"><br>
+                        <label for="message">Message</label><br>
+                        <textarea placeholder="Type your message here...." name="message" id="message"></textarea><br>
+                        <div class="submi">
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Send">Submit</button>
+                        </div>
                 </form>
             </div>
         </div>
