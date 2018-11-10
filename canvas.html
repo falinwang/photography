@@ -1,39 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/canvastyle.css">
-
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 
-<body>
-    <h1>Canvas</h1>
-    <p>This is my canvas</p>
+<body onload="startGame()">
+    <script>
+        var myGamePiece; // make our first component, called myGamePiece
 
-    <div class="container">
-        <canvas id="myCanvas" width="800px" height="500px">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
-        <div id="buttons">
-            <input type="button" id="reset" value="Reset" />
-            <div id='red' class="color"></div>
-            <div id='blue' class="color"></div>
-            <div id='green' class="color"></div>
-            <div id='yellow' class="color"></div>
-            <div id="default" class="color">1</div>
+        function startGame() {
+            // make our first component, called myGamePiece
+            myGamePiece = new component(10, 10, 10, 0, 2 * Math.PI, "black", 0, 0); // 筆刷
+            myGameArea.start();
+        }
 
-            <div id="three" class="color">3</div>
-            <div id="five" class="color">5</div>
-            <div id="ten" class="color">10</div>
-            <div id="fifteen" class="color">15</div>
-            <div id="twenty" class="color">20</div>
-        </div>
-    </div>
-    <script src="scripts/main.js"></script>
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function () {
+                this.canvas.width = 800;
+                this.canvas.height = 500;
+                // this.canvas.style.cursor = "none"; //hide the original cursor
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                // To make the game ready for action, we will update the display 50 times per second, which is much like frames in a movie.
+                // add an interval which will run the updateGameArea() function every 20th millisecond (50 times per second)
+                this.interval = setInterval(updateGameArea, 1);
+
+                // Create a method that checks if a key is pressed, and set the key property of the myGameArea object to the key code. 
+                window.addEventListener('keydown', function (e) {
+                    myGameArea.key = e.keyCode;
+                })
+                // When the key is released, set the key property to false:
+                window.addEventListener('keyup', function (e) {
+                    myGameArea.key = false;
+                })
+
+                // Add a method in the myGameArea object that uses the x and y coordinates of where the screen is touched:
+                window.addEventListener('touchmove', function (e) {
+                    myGameArea.x = e.touches[0].screenX;
+                    myGameArea.y = e.touches[0].screenY;
+                })
+                // Using The Mouse Cursor as a Controller
+                window.addEventListener('mousemove', function (e) {
+                    myGameArea.x = e.pageX;
+                    myGameArea.y = e.pageY;
+                })
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                myGamePiece.width = 10;
+                myGamePiece.height = 10;
+            }
+        }
+
+        // The object constructor is called component
+        function component(width, height, color, x, y) {
+            this.width = width;
+            this.height = height;
+            // Make two new properties in the component constructor, and call them speedX and speedY. These properties are being used as speed indicators.
+            this.speedX = 0;
+            this.speedY = 0;
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.update = function () {
+                ctx = myGameArea.context;
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            // Add a function in the component constructor, called newPos(), which uses the speedX and speedY properties to change the component's position.
+            this.newPos = function () {
+                this.x += this.speedX;
+                this.y += this.speedY;
+            }
+        }
+
+        function updateGameArea() {
+            // move the red square if the user touches the screen
+            if (myGameArea.touchX && myGameArea.touchY) {
+                myGamePiece.x = myGameArea.x;
+                myGamePiece.y = myGameArea.y;
+            }
+            // move the red square using the mouse cursor
+            if (myGameArea.x && myGameArea.y) {
+                myGamePiece.x = myGameArea.x;
+                myGamePiece.y = myGameArea.y;
+            }
+            // clear the canvas
+            if (myGameArea.key && myGameArea.key == 32) {
+                myGameArea.clear();
+            }
+
+            // The newpos function is called from the updateGameArea function before drawing the component:
+            myGamePiece.newPos();
+            myGamePiece.update();
+
+            // change the color
+            if (myGameArea.key && myGameArea.key == 66) {
+                myGamePiece.color = "blue";
+            }
+            if (myGameArea.key && myGameArea.key == 71) {
+                myGamePiece.color = "green";
+            }
+            if (myGameArea.key && myGameArea.key == 82) {
+                myGamePiece.color = "red";
+            }
+            if (myGameArea.key && myGameArea.key == 89) {
+                myGamePiece.color = "yellow";
+            }
+
+            // change the size
+            // up
+            if (myGameArea.key && myGameArea.key == 38) {
+                myGamePiece.width += 0.5;
+                myGamePiece.height += 0.5;
+            }
+            // down
+            if (myGameArea.key && myGameArea.key == 40) {
+                myGamePiece.width -= 0.5;
+                myGamePiece.height -= 0.5;
+            }
+            if (myGameArea.key && myGameArea.key == 53) {
+                myGamePiece.width = 10;
+                myGamePiece.height = 10;
+            }
+        }
+    </script>
+    <h1>Instruction:</h1>
+    <p>Press "space" to clean the canvas.</p>
+    <p>Press "up" to increase the size.</p>
+    <p>Press "down" to decrease the size.</p>
+    <p>Press "5" to reset the size.</p>
+    <p>Press "b" to change the color to blue.</p>
+    <p>Press "y" to change the color to yellow.</p>
+    <p>Press "r" to change the color to red.</p>
+    <p>Press "g" to change the color to green.</p>
 </body>
 
 </html>
