@@ -59,6 +59,7 @@ Class: SI 539 Web Design
 - [x] Add downloadable resume on `biography.html`
 - [x] Position `about.html`
 - [x] Add RWD 
-- [ ] Add pictures on `works.html`
+- [x] Add pictures on `works.html`
 - [ ] Add "Back To Top" footer
 - [ ] Remove the big space under `contact.html`
+- [ ] Add lightbox on `works.html`
