@@ -1,0 +1,37 @@
+body {
+    cursor: crosshair;
+}
+Canvas {
+    border: 1px solid #000;
+    background-color: #f1f1f1;
+}
+
+
+
+#reset {
+  margin-top: 10px;
+  margin-left: 5px;
+  float: left;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+  text-align: center;
+}
+#red {
+  background-color: red;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
+}
+#yellow {
+  background-color: yellow;
+}

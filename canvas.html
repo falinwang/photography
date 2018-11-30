@@ -17,7 +17,7 @@
 
         function startGame() {
             // make our first component, called myGamePiece
-            myGamePiece = new component(10, 10, 10, 0, 2 * Math.PI, "black", 0, 0); // 筆刷
+            myGamePiece = new component(10, 10, "black", 0, 0); // 筆刷
             myGameArea.start();
         }
 
@@ -33,7 +33,7 @@
                 // add an interval which will run the updateGameArea() function every 20th millisecond (50 times per second)
                 this.interval = setInterval(updateGameArea, 1);
 
-                // Create a method that checks if a key is pressed, and set the key property of the myGameArea object to the key code. 
+                // Create a method that checks if a key is pressed, and set the key property of the myGameArea object to the key code.
                 window.addEventListener('keydown', function (e) {
                     myGameArea.key = e.keyCode;
                 })
