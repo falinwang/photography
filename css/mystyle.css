@@ -3,22 +3,31 @@
 
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-    line-height: 1;
+    line-height: 1.3;
     font-family: 'Roboto Condensed';
     margin: 0;
     padding: 0;
-    background-color: #254284;
-    color: white;
-    min-height:100%;
+    color: black;
+    min-height: 100%;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
 }
@@ -29,7 +38,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:hover {
@@ -37,60 +46,57 @@ a:hover {
 }
 
 .main-content {
-    position: relative;	
-    margin: 5%;
-
+    position: relative;
+    font-family: 'Roboto Condensed';
+    height: 100vh;
 }
 
-/* navigation */
-
-header, footer {
+/* Header */
+header,
+footer {
     text-align: center;
-    background-color: #000;
+    background-color: #212121;
 }
 
 header {
-    border: 1px solid black;
+    border: 2px solid #212121;
+    padding: 2em;
 }
 
+/* Logo */
 .logo {
-    margin: 0;
-	padding: 0;
-	max-width: 90%;
-	display: block;
-	margin: auto;
+    margin-top: -1em;
+    padding: .5em;
+    max-width: 90%;
+    display: block;
 }
 
 .logo img {
-	height: auto;
-	max-width: 100%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 70px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    max-height: 70%;
 }
 
-/* nav {
-    top: 0;
-} */
-
+/* navigation */
 nav ul {
     display: block;
-    /* align-self: center; */
+    align-self: center;
+    margin: auto;
 }
 
 nav ul li {
     list-style: none;
-    padding: 1em;
-    
-	margin: .5em;
-	border-top: 1px solid #000000;
+    padding: .5em;
+    border-top: 1px solid;
+    line-height: 30px;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-family: 'Roboto Condensed';
     padding: .5em 1em;
     font-weight: lighter;
@@ -107,65 +113,49 @@ nav ul li a:hover {
 
 }
 
-/* footer {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
+/* Footer */
+footer {
     display: block;
-	color: #ffffff; 
+    color: #ffffff;
     text-align: center;
-} */
+}
 
 footer p {
     font-size: 0.75em;
-    padding-bottom: .5em;
+    padding: 0.5em;
+    margin-top: 0;
 }
 
-/* index page */
-
-.index {
-    width: 100%;
-    height: auto;
-    background-image: url(../img/bgimgcrop.png);
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
-}
-
-* {
-    box-sizing: border-box;
-  }
-
-
+/* Index page */
+/* Background Image */
 .main-content-index {
-    width: 90%;
-    margin: 10% auto 10% auto;
+    background: url("../img/bgimgcrop.png") no-repeat;
+    background-size: 100% 100%;
 }
 
-.caption1 {
-    margin: 5% 10% 5%;
-    width: 70%;
-    text-align: left; 
-    font-size: 1.5em;
-}
-
+/* Text of Home Page */
 .caption1 span.border {
     padding: 2em 0 2em 0;
     border: 2em;
 }
 
-
+.caption1 {
+    padding-top: 3em;
+    color: white;
+    padding-left: 5%;
+    padding-top: 15%;
+    text-align: left;
+    font-size: 1.5em;
+}
 
 /* About Page */
-
 .main-content-about h1 {
     text-align: left;
+    font-size: 2em;
 }
 
 section {
     padding: 1% 5%;
-    
 }
 
 aside img {
@@ -177,18 +167,35 @@ aside img {
 }
 
 
+/* Resume Page */
 
-/* Biography */
-
-.pdf iframe{
-    width:100%; 
-    height:600px;
+.pdf iframe {
+    width: 100%;
+    height: 600px;
 }
 
 /* Works Page*/
 
+/* lightbox */
+.gallery {
+    width: 95%;
+    border: 2px solid whitesmoke;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.item {
+    border: 4px solid rgb(58, 58, 58);
+}
+
 .works {
-    background-color: rgb(58, 58, 58);
+    background-color: whitesmoke;
 }
 
 .heading {
@@ -219,7 +226,7 @@ aside img {
 
 /* Contact Page */
 .contactpage {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;  
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 100;
     display: grid;
     grid-template-rows: 100px 1fr 100px;
@@ -227,13 +234,13 @@ aside img {
 
 .main-container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
 }
 
 /* Left - Contact icon */
 
 i {
-    color: rgba(0, 0, 0, 0.24);
+    /* color: rgba(0, 0, 0, 0.24); */
+    color: black;
     vertical-align: middle;
 }
 
@@ -245,30 +252,48 @@ i:hover {
     color: #fff;
 }
 
-.contact-heading { 
-    grid-area: h1; 
+.contact-heading {
+    grid-area: h1;
     font-family: skia;
-    color: yellow;}
-.mail-icon { grid-area: mail; }
-.linkedin-icon { grid-area: link; }
-.github-icon { grid-area: git; }
-.fb-icon { grid-area: fb; }
-.ig-icon { grid-area: ig; }
-.medium-icon { grid-area: med; }
+}
+
+.mail-icon {
+    grid-area: mail;
+}
+
+.linkedin-icon {
+    grid-area: link;
+}
+
+.github-icon {
+    grid-area: git;
+}
+
+.fb-icon {
+    grid-area: fb;
+}
+
+.ig-icon {
+    grid-area: ig;
+}
+
+.medium-icon {
+    grid-area: med;
+}
 
 .icon-container {
     display: grid;
     grid-template-areas:
-    'h1 h1 h1'
-    'h1 h1 h1'
-    'mail link git'
-    'fb ig med';
+        'h1 h1 h1'
+        'h1 h1 h1'
+        'mail link git'
+        'fb ig med';
     margin: 350px auto auto auto;
     grid-gap: 10px;
     padding: 10px;
 }
 
-.icon-container > div {
+.icon-container>div {
     text-align: center;
     padding: 10px 30px;
     font-size: 20px;
@@ -278,12 +303,12 @@ i:hover {
     font-size: 11px;
 }
 
-/* Right - Contact form */ 
+/* Right - Contact form */
 
 .contactform-container {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;  
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 100;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 30px;
     max-width: 400px;
     width: 100%;
@@ -294,25 +319,24 @@ i:hover {
 
 #contact input[type="text"],
 #contact input[type="email"],
-#contact input[type="tel"],
 #contact textarea,
 #contact button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
 #contact {
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 100px 0px 100px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background: #F9F9F9;
+    padding: 20px 45px 20px 30px;
+    margin: 100px 0px 100px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  text-align: center;
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 fieldset {
@@ -334,7 +358,6 @@ fieldset {
 
 #contact input[type="text"],
 #contact input[type="email"],
-#contact input[type="tel"],
 #contact textarea {
     width: 100%;
     border: 1px solid #ccc;
@@ -345,63 +368,53 @@ fieldset {
 
 #contact input[type="text"]:hover,
 #contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
 #contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
 }
 
 #contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
+    height: 100px;
+    max-width: 100%;
+    resize: none;
 }
 
 #contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: rgb(109, 105, 105);
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: rgb(109, 105, 105);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
-  background: black;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+    background: black;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 #contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px grey;
+    box-shadow: inset 0 1px 3px grey;
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
+    outline: 0;
+    border: 1px solid #aaa;
 }
 
-::-webkit-input-placeholder {
-  color: #888;
+
+/* END OF Contact form */
+
+/* New Contact Form */
+.testform label,
+input,
+textarea {
+    display: block;
 }
-
-:-moz-placeholder {
-  color: #888;
-}
-
-::-moz-placeholder {
-  color: #888;
-}
-
-:-ms-input-placeholder {
-  color: #888;
-}
-/* END OF Contact form */ 
-
-

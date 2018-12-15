@@ -8,9 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+
+
     <link rel="Shortcut Icon" type="image/x-icon" href="./img/roynana.png" />
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="./scripts/contactform.js"></script>
     <title>Contact Roy Wang</title>
 </head>
 
@@ -23,14 +29,16 @@
                     <a href="index.html"><img src="./img/logoroywang.png" alt="title image - Roy Wang" title=""></a>
                 </div>
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="works.html">Works</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="biography.html">Resume</a></li>
                     <li><a class="current-page" href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="main-container">
+            <!-- left side -->
             <div class="icon-container">
                 <div class="contact-heading">
                     <h1>Let's Connect!</h1>
@@ -73,26 +81,31 @@
                     </a>
                 </div>
             </div>
+            <!-- right side -->
             <div class="contactform-container">
-                <form id="contact" action="mailto:falinw@umich.edu" method="post">
-                    <h3>Contact</h3><br>
-                    <label for="name">Full Name</label><br>
-                    <input placeholder="Your name" type="text" name="name" id="name"><br>
-                    <label for="email">Email</label><br>
-                    <input placeholder="Your Email Address" type="email" name="email" id="email"><br>
-                    <label for="tel">Phone</label><br>
-                    <input placeholder="Your Phone Number (optional)" type="tel" name="tel" id="tel"><br>
-                    <label for="message">Message</label><br>
-                    <textarea placeholder="Type your message here...." name="message" id="message"></textarea><br>
+                <form id="contact" action="https://formspree.io/falinw@umich.edu" method="POST">
+                    <h3>Contact Me</h3><br>
+                    <label for="email">Email
+                        <input type="email" name="email" id="email" class="email"></label>
+                    <label for="subject">
+                        Subject
+                        <input type="text" name="subject" id="subject" class="subject" />
+                    </label>
+                    <label for="message">Message
+                        <textarea placeholder="Type your message here...." name="message" class="message"></textarea></label><br>
+                    <div class="status">
+
+                    </div>
                     <div class="submi">
-                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Send">Submit</button>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Send"
+                            class="submit">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
         <!-- footer -->
         <footer>
-            <p>Roy Wang &copy; 2018</p>
+            <p>Designed and Developed by Roy Wang &copy; 2018</p>
         </footer>
     </div>
 </body>
