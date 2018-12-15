@@ -200,7 +200,7 @@ aside img {
 
 .heading {
     text-align: center;
-    margin: 5% auto;
+    margin: 3% auto;
 }
 
 .row-photo {
@@ -225,12 +225,6 @@ aside img {
 }
 
 /* Contact Page */
-.contactpage {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 100;
-    display: grid;
-    grid-template-rows: 100px 1fr 100px;
-}
 
 .main-container {
     display: grid;
