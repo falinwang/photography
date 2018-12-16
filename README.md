@@ -61,6 +61,17 @@ Date: 2018/12/15
 
 - My responsive design is based on the size of width changes. Two triggers include the width is wider than 1024 pixels and the width is wider than 680 pixels. The main change is on the navigation bar and logo and also for the items rearrange for different devices users.
 
+### IV. Axe and Wave
+
+- Home: axe
+	- Elements must have sufficient color contrast: Element's background color could not be determined due to a background image
+	- I have changed the background to black and the text color to white and I use the dimmed background image so the color contrast of text should be good.
+- Works: WAVE
+	- 3 Errors caused by Lightbox
+	- I have checked the Piazza and these errors don’t need to be fixed for now.
+
+
+---
 
 # Process of Building
 
