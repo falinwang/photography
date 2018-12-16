@@ -1,5 +1,3 @@
-@media only screen and (max-width: 680px) {}
-
 /* For screen width between 680px and 1024px */
 @media only screen and (min-width: 680px) {
 
@@ -106,13 +104,7 @@
         grid-row-end: 2;
     }
 
-
-
-    /* Biography */
-
-
     /* Works Page*/
-
 
     .heading {
         padding: 50px 32px;

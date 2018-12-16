@@ -1,5 +1,7 @@
-# falinwang.github.io
+# Write-up of falinwang.github.io
+Name: Roy Fa-Lin Wang
 Class: SI 539 Web Design
+Date: 2018/12/15
 
 # Final Project Specification
 ## Required Minimum Content
@@ -18,11 +20,10 @@ Class: SI 539 Web Design
 - [x] Each page has at least two paragraphs or pictures or a combination of a picture and a paragraph
 
 ## Required including documentation
-
-### A description of where to find at least two uses of JavaScript and/or jQuery.
+### I. A description of where to find at least two uses of JavaScript and/or jQuery.
 
 1. **Lightbox photo gallery using javascript and jQuery**
-	1. Location: Work - Photography (works.html)
+	1. Location: Work - Photography (`works.html`)
 	2. Description: I use what I learned in class to display my photography with Lightbox that user can click on the small pictures and see the bigger image and the description under that picture.
 	3. Sources: 
 		- Assignment - Lightbox photo gallery. 
@@ -34,7 +35,7 @@ Class: SI 539 Web Design
 			- [lightbox.css](https://github.com/lokesh/lightbox2/archive/master.zip)
 	4. I changed the photo links and the color and border in css and then integrated the css into mine.
 2. **Contact form and validation using javascript and jQuery**
-	1. Location: Contact - Contact Form (contact.html)
+	1. Location: Contact - Contact Form (`contact.html`)
 	2. Involved files and sources:
 		- contact.html
 		- contactform.js
@@ -43,6 +44,22 @@ Class: SI 539 Web Design
 	4. Source: 
 		- Tutorial by Kevin Simper [Making and validating a working Contact Form with JavaScript - YouTube](https://www.youtube.com/watch?v=eg4e-FObyJ8&t=1136s)
 	5. I follow the tutorial to add the jQuery and JavaScript. I changed the variables, items , the validation, and the prompts. And also changed the css.
+
+### II. A description of where to find your uses of grid and/or flex box.  
+
+1. **Using Grid for display the photos in Lightbox**
+	1. Location: Works > Photography (`works.html`)
+	2. Description: I use grid to divide the page into three columns evenly that my photos can be display prettier.
+2. **Using Grid to locate page into two sections**
+	1. Location: Contact > Main (`contact.html`)
+	2. Description: Because I want the page can display the icons and the contact form in each side of page, I divide the page into two parts using `1fr 1fr`.
+3. **Using Grid to locate the icons**
+	1. Location: Contact > Left Side (icons) (`contact.html`)
+	2. Description: I want to put six icons in orders so grid would be the best choice to locate these icons. I use `grid-template-areas` to assign each icon to each area and group them.
+
+### III. A description of your responsive design choices and how to trigger them.  
+
+- My responsive design is based on the size of width changes. Two triggers include the width is wider than 1024 pixels and the width is wider than 680 pixels. The main change is on the navigation bar and logo and also for the items rearrange for different devices users.
 
 
 # Process of Building
