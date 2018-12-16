@@ -25,6 +25,7 @@
 
     .logo {
         padding-top: .5em;
+        margin-top: -1em;
         max-width: 50%;
         margin-left: auto;
         margin-right: auto;
@@ -50,10 +51,19 @@
     .logo {
         float: left;
         max-width: 30%;
+        margin: auto;
+        margin-top: -1em;
+        padding: .5em;
+        max-width: 90%;
+        display: block;
     }
 
     .logo img {
-        margin: auto;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     nav ul {
@@ -190,15 +200,6 @@
         min-width: 100%;
         padding: 0;
         width: 100%;
-    }
-
-    .submi {
-        align-items: flex-start;
-        border: medium none !important;
-        margin: 0 0 0px;
-        min-width: 20%;
-        padding: 0;
-        width: 20%;
     }
 
     #contact input[type="text"],

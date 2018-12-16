@@ -48,7 +48,6 @@ a:hover {
 .main-content {
     position: relative;
     font-family: 'Roboto Condensed';
-    height: 100vh;
 }
 
 .skip-links {
@@ -79,13 +78,11 @@ footer {
 
 header {
     border: 2px solid #212121;
-    padding: 2em;
 }
 
 /* Logo */
 .logo {
     margin: auto;
-    margin-top: -1em;
     padding: .5em;
     max-width: 90%;
     display: block;
@@ -103,16 +100,15 @@ header {
 /* navigation */
 nav ul {
     display: block;
-    align-self: center;
-
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     list-style: none;
     padding: .5em;
-    border-top: 1px solid;
+    border-top: 1px solid rgb(26, 53, 53);
     line-height: 30px;
-    display: inline-block;
 }
 
 nav ul li a {
@@ -153,6 +149,7 @@ footer p {
 .main-content-index {
     background: url("../img/bgimgcrop.png") no-repeat;
     background-size: 100% 100%;
+    height: 100vh;
 }
 
 /* Text of Home Page */
@@ -224,7 +221,7 @@ aside img {
     margin: 3% auto;
 }
 
-.row-photo {
+/* .row-photo {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
@@ -243,7 +240,7 @@ aside img {
 .column-photo img:hover {
     transition: 0.5s;
     opacity: 0.5;
-}
+} */
 
 /* Contact Page */
 
@@ -303,14 +300,14 @@ i:hover {
         'h1 h1 h1'
         'mail link git'
         'fb ig med';
-    margin: 350px auto auto auto;
+    margin: auto;
     grid-gap: 10px;
     padding: 10px;
 }
 
 .icon-container>div {
     text-align: center;
-    padding: 10px 30px;
+    padding: 10px 15px;
     font-size: 20px;
 }
 
