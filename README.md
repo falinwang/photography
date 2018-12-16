@@ -19,10 +19,36 @@ Class: SI 539 Web Design
 
 ## Required including documentation
 
+### A description of where to find at least two uses of JavaScript and/or jQuery.
+
+1. **Lightbox photo gallery using javascript and jQuery**
+	1. Location: Work - Photography (works.html)
+	2. Description: I use what I learned in class to display my photography with Lightbox that user can click on the small pictures and see the bigger image and the description under that picture.
+	3. Sources: 
+		- Assignment - Lightbox photo gallery. 
+		- I use the starter code which teacher provided and follow the instructions and use the javascript and jQuery file provided by “[Lightbox by Lokesh Dhakar](https://lokeshdhakar.com/projects/lightbox2/) “
+		- The file I used:
+			- [lightbox-template.html](https://umich.instructure.com/courses/244017/files/9281693/download?verifier=66Kr6XbDJF24MXFPLVwShEltKR34p1NzRWSun1lN&wrap=1)
+			- [style.css](https://umich.instructure.com/courses/244017/files/9281698/download?verifier=H7HFynFUefQutTHFxxPlmGnlPITv8eNMleLXSntf&wrap=1)
+			* [lightbox-plus-jquery.js](https://github.com/lokesh/lightbox2/archive/master.zip)
+			- [lightbox.css](https://github.com/lokesh/lightbox2/archive/master.zip)
+	4. I changed the photo links and the color and border in css and then integrated the css into mine.
+2. **Contact form and validation using javascript and jQuery**
+	1. Location: Contact - Contact Form (contact.html)
+	2. Involved files and sources:
+		- contact.html
+		- contactform.js
+		- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	3. Description: To provide user a contact form to send email to me, I add the contact form that can validate the input with Javascript and jQuery and then send email to me with the service provided by [[Formspree](https://formspree.io/)](https://formspree.io/).
+	4. Source: 
+		- Tutorial by Kevin Simper [Making and validating a working Contact Form with JavaScript - YouTube](https://www.youtube.com/watch?v=eg4e-FObyJ8&t=1136s)
+	5. I follow the tutorial to add the jQuery and JavaScript. I changed the variables, items , the validation, and the prompts. And also changed the css.
+
+
 # Process of Building
 
-# Project with HTML and simple CSS
-## Sep 21 - Second Commit
+## Project with HTML and simple CSS
+### Sep 21 - Second Commit
 - Criteria:
 1. Content: The site is well thought out and there are no glaring omissions in content. You must have at least four separate pages that are linked via the nav section.
 2. Images: There are at least 10 images on your site. At least five of those images must be local and stored in a separate folder from the HTML.
@@ -31,8 +57,8 @@ Class: SI 539 Web Design
 5. The site is succesfully hosted: There can not be any broken images or links.
 6. Other: Make sure to check the grading protocols for possible deductions. https://umich.instructure.com/courses/244017/pages/grading-slash-attendance-slash-protocols?module_item_id=513709
 
-# Project with Layout
-## Oct 5 - Third Commit
+## Project with Layout
+### Oct 5 - Third Commit
 - Criteria:
 1. Use grid or flexbox for significant portions of one page on your site (e.g. layout is done with grid or images are displayed using flex).
 2. Use FontAwesome on one page of your site.
@@ -45,8 +71,8 @@ Class: SI 539 Web Design
 - [x] Applied grid on `contact.html` and flexbox on `works.html`
 
 
-# Project with Responsive Design
-## Oct 26 - Fifth Commit
+## Project with Responsive Design
+### Oct 26 - Fifth Commit
 - Description:
 > Using media queries, create three distinct layouts.  These new layouts can be based on viewport size, orientation, or device type.  It is important that the actual functionality is changed, not just size and/or colors.
 > 
@@ -63,7 +89,7 @@ Class: SI 539 Web Design
 4. Site works successfully on actual mobile device, not just simulator. (Test it!!)
 
 
-- Changes:
+# Changes so far:
 - [x] Change the default layout to mobile-first version
 - [x] Add width based media query with (1) width < 680, (2) 680 - 1000 and (3) width > 1000
 - [x] Add orientation media query (landscape)
