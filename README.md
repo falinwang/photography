@@ -1,6 +1,26 @@
 # falinwang.github.io
 Class: SI 539 Web Design
 
+# Final Project Specification
+## Required Minimum Content
+1. Submit a (minimum four page) site.  *All of the pages must use a common header, footer, and navigation.*
+2. The navigation must clearly display the current page.
+3. Each page should contain a main section that can be reached using a *Jump to Content* option with the first tab on the page.
+4. With the exception of a landing page, each page must have a minimum of two paragraphs of text or two pictures or a combination of picture and paragraph.  This is a minimum.
+
+### To-Do:
+- [x] All pages have header
+- [x] All pages have footer
+- [x] All pages gave navigation
+- [x] Show current page at navigation
+- [x] All pages contain a main section
+- [x] All pages have “Skip to the Main content”
+- [x] Each page has at least two paragraphs or pictures or a combination of a picture and a paragraph
+
+## Required including documentation
+
+# Process of Building
+
 # Project with HTML and simple CSS
 ## Sep 21 - Second Commit
 - Criteria:
@@ -52,14 +72,17 @@ Class: SI 539 Web Design
 - [x] Change the background image layout on `index.html`
 - [x] Position `About.html`
 - [x] Add *current-page* with yellow color for user to locate the page
-
-
-# To-Do:
-
 - [x] Add downloadable resume on `biography.html`
 - [x] Position `about.html`
 - [x] Add RWD 
 - [x] Add pictures on `works.html`
-- [ ] Add "Back To Top" footer
-- [ ] Remove the big space under `contact.html`
-- [ ] Add lightbox on `works.html`
+- [x] Add "Back To Top" footer
+- [x] Remove the big space under `contact.html`
+- [x] Add lightbox on `works.html`
+- [x] Add "Jump to Content" (Skip to the main content)
+- [x] Add "Jump to Navigation" (Skip to navigation)
+
+
+# To-Do:
+
+
