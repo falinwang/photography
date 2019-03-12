@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="./scripts/contactform.js"></script>
-    <title>Contact Roy Wang</title>
+    <title>Contact | Roy Fa-Lin Wang</title>
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=279521782699174&autoLogAppEvents=1"></script>
     <header id="top">
         <ul class="skip-links">
             <li><a href="#nav">Skip to navigation</a></li>
@@ -34,6 +36,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="works.html">Works</a></li>
+                <li><a href="photography.html">Photography</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a class="current-page" href="contact.html">Contact</a></li>
             </ul>
@@ -72,9 +75,9 @@
                     </a>
                 </div>
                 <div class="ig-icon icon">
-                    <a href="https://www.instagram.com/roywannago_/" target="_blank">
+                    <a href="https://www.instagram.com/royfalinwang/" target="_blank">
                         <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></span>
-                        <p>roywannago_</p>
+                        <p>@royfalinwang</p>
                     </a>
                 </div>
                 <div class="medium-icon icon">
@@ -83,10 +86,31 @@
                         <p>Medium</p>
                     </a>
                 </div>
+
             </div>
             <!-- right side -->
             <div class="contactform-container">
-                <form id="contact" action="https://formspree.io/falinw@umich.edu" method="POST">
+                <h2>Like My Facebook Page!</h2>
+                <!-- <h3>RoyWannago 旅行不需理由</h3> -->
+                <!-- Facebook Button -->
+                <div class="fb-like" data-href="https://www.facebook.com/roywannago" data-layout="button_count"
+                    data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+
+                <!-- InstaWidget -->
+                <h2>Follow My Instagram!</h2>
+
+                <div>
+                    <a href="https://instawidget.net/v/user/royfalinwang" id="link-2d870df9a54b09d26e52a5314229a17a8411d7cb60ea17b97be03537aa9569e4">@royfalinwang</a>
+                    <script src="https://instawidget.net/js/instawidget.js?u=2d870df9a54b09d26e52a5314229a17a8411d7cb60ea17b97be03537aa9569e4&width=400px"></script>
+                </div>
+                <!-- Facebook -->
+                <!-- <div class="fb-page" data-href="https://www.facebook.com/roywannago/" data-tabs="timeline" data-width="400"
+                    data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                    data-show-facepile="false">
+                    <blockquote cite="https://www.facebook.com/roywannago/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/roywannago/">RoyWannago
+                            旅行不需理由</a></blockquote>
+                </div> -->
+                <!-- <form id="contact" action="https://formspree.io/falinw@umich.edu" method="POST">
                     <h3>Contact Form</h3>
                     <label for="email">Email
                         <input type="email" name="email" id="email" class="email"></label>
@@ -103,7 +127,7 @@
                         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Send"
                             class="submit submi">Submit</button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </main>
