@@ -74,7 +74,6 @@
     height:   28px;
     width:    auto;
     max-width: 100%;
-    filter:   invert(1); /* logo is white on transparent — invert for white bg */
     margin:   0;
 }
 
@@ -203,7 +202,8 @@
 
 /* ─── Social Link Rows ─── */
 .contact-links {
-    padding: 0;
+    padding:    0;
+    margin-top: 4rem;
 }
 
 .contact-link-row {

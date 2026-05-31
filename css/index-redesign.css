@@ -5,10 +5,9 @@
 
 /* ─── Page reset for full-screen layout ─── */
 .page-home {
-    overflow:   hidden;
-    height:     100vh;
-    background: #ffffff;
-    color:      #000000;
+    overflow:    hidden;
+    background:  #ffffff;
+    color:       #000000;
     font-family: "Source Serif 4", Georgia, serif;
 }
 
@@ -34,7 +33,7 @@
 .home-split {
     display:               grid;
     grid-template-columns: 45fr 55fr;
-    height:                100vh;
+    height:                calc(100vh - 60px); /* full viewport minus footer */
     position:              relative;
     z-index:               1;
 }
@@ -76,7 +75,6 @@
     height:    24px;
     width:     auto;
     max-width: 100%;
-    filter:    invert(1);
     margin:    0;
 }
 
@@ -255,29 +253,27 @@
     transform: translateX(4px);
 }
 
-/* ─── Footer (pinned to bottom of left panel) ─── */
+/* ─── Footer (full-width, below the split) ─── */
 .page-home footer {
     background:  #ffffff;
-    border-top:  1px solid #e5e5e5;
-    padding:     1rem 2.5rem;
-    flex-shrink: 0;
+    border-top:  4px solid #000000;
+    padding:     2rem 3rem;
     position:    relative;
     z-index:     1;
-    margin-top:  0;
     text-align:  left;
 }
 
 .page-home footer p {
     font-family:    "JetBrains Mono", "Courier New", monospace;
-    font-size:      0.6rem;
-    letter-spacing: 0.1em;
+    font-size:      0.65rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color:          #a0a0a0;
+    color:          #525252;
     margin:         0;
 }
 
 .page-home footer a {
-    color:           #525252;
+    color:           #000000;
     text-decoration: none;
     border-bottom:   1px solid currentColor;
 }
@@ -313,33 +309,47 @@
 /* ─── Responsive: tablet ─── */
 @media (max-width: 900px) {
     .page-home {
-        overflow:   auto;
-        height:     auto;
+        overflow: auto;
+        height:   auto;
     }
 
+    /* Stack: content top, photo bottom */
     .home-split {
         grid-template-columns: 1fr;
-        grid-template-rows:    45vh auto;
+        grid-template-rows:    auto 45vh;
         height:                auto;
     }
 
-    /* Photo goes first on mobile */
     .home-right {
-        order:  -1;
         height: 45vh;
+        order:  unset; /* photo stays at bottom */
     }
 
     .home-left {
-        border-right:  none;
-        border-bottom: none;
+        border-right: none;
     }
 
+    /* Nav matches other pages: logo top, links centered below */
     .page-home header {
         border-bottom: 4px solid #000000;
     }
 
     .page-home nav {
-        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap:            0.75rem;
+        padding:        0.875rem 1.5rem;
+    }
+
+    .page-home .logo {
+        max-width: 90px;
+    }
+
+    .page-home nav ul {
+        justify-content: center;
+    }
+
+    .page-home nav ul li a {
+        padding: 0.375rem 0.75rem;
     }
 
     .home-main {
@@ -351,9 +361,6 @@
         font-size: clamp(3.5rem, 14vw, 6rem);
     }
 
-    .page-home footer {
-        padding: 1rem 1.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -370,6 +377,6 @@
     }
 
     .page-home footer {
-        padding: 0.875rem 1.25rem;
+        padding: 1.25rem;
     }
 }

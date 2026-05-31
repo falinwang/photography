@@ -86,7 +86,6 @@ header {
     padding: .5em;
     max-width: 90%;
     display: block;
-
 }
 
 .logo img {
@@ -95,6 +94,19 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Text logo mark — used on redesigned pages */
+.logo-text {
+    font-family:     "Playfair Display", Georgia, serif;
+    font-size:       1.6rem;
+    font-weight:     700;
+    font-style:      italic;
+    color:           #000000;
+    text-decoration: none;
+    letter-spacing:  -0.06em;
+    line-height:     1;
+    display:         block;
 }
 
 /* navigation */
