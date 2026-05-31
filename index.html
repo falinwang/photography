@@ -5,66 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Monochrome typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:opsz,wght@8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
     <link rel="Shortcut Icon" type="image/x-icon" href="./img/roynana.png" />
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/index-redesign.css">
 
-    <title>Roy Fa-Lin Wang | UX Designer</title>
+    <title>Roy Wang | UX Designer</title>
 </head>
 
-<body>
-    <header id="top">
-        <ul class="skip-links">
-            <li><a href="#nav">Skip to navigation</a></li>
-            <li><a href="#main">Skip to the main content</a></li>
-        </ul>
-        <nav id="nav">
-            <!-- start navigation bar -->
-            <div class="logo">
-                <img src="./img/logoroywang.png" alt="title image - Roy Wang" title="">
-            </div>
-            <ul>
-                <li><a class="current-page" href="index.html">Home</a></li>
-                <!-- <li><a href="works.html">Works</a></li> -->
-                <li><a href="photography.html">Photography</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="page-home">
+    <div class="home-split">
 
-    <!-- main -->
-    <main id="main">
-        <div class="main-content-index">
-            <div class="caption1 border">
-                <p>Welcome to my photography website.</p>
-                <h1>Roy Wang</h1>
-                <h2>UX Designer</h2>
-                <p>I'm a Product UX Designer and a self-starter who passionate about HealthTech, user-centered design,
-                    and Milk Tea.</p>
-            </div>
+        <!-- ── Left: typography panel ── -->
+        <div class="home-left">
+            <header id="top">
+                <ul class="skip-links">
+                    <li><a href="#nav">Skip to navigation</a></li>
+                    <li><a href="#main">Skip to the main content</a></li>
+                </ul>
+                <nav id="nav" aria-label="Main navigation">
+                    <div class="logo">
+                        <img src="./img/logoroywang.png" alt="Roy Wang" />
+                    </div>
+                    <ul>
+                        <li><a class="current-page" href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="photography.html">Photography</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="main" class="home-main">
+                <p class="home-overline">Photography &amp; Design</p>
+                <h1 class="home-headline">
+                    Roy
+                    <em>Wang.</em>
+                </h1>
+                <div class="home-deco" aria-hidden="true">
+                    <span class="home-deco-square"></span>
+                    <div class="home-deco-rule"></div>
+                </div>
+                <p class="home-role">UX Designer</p>
+                <p class="home-tagline">Passionate about HealthTech, user-centered design, and Milk Tea.</p>
+                <nav class="home-nav-links" aria-label="Site sections">
+                    <a href="photography.html">Photography <span>→</span></a>
+                    <a href="about.html">About <span>→</span></a>
+                    <a href="contact.html">Contact <span>→</span></a>
+                </nav>
+            </main>
+
+            <footer>
+                <p>Roy Wang &copy; 2019 &mdash; <a href="#top">Back to Top</a></p>
+            </footer>
         </div>
-        <!-- <div class="Work">
-            <div class="work-grid-container">
-                <div class="work-item1">
-                    <a href="#"><img src="./img/sing.jpg" alt="lav"></a>
-                </div>
-                <div class="work-item2">
-                    <a href="#"><img src="img/autraf.jpg" alt="Photography - Australian Puffing Billy train"></a>
-                </div>
-                <div class="work-item3">
-                    <a href="#"><img src="img/aubar.jpg" alt="Photography - Gordon Dam"></a>
-                </div>
-            </div>
-        </div> -->
-    </main>
-    <!-- footer -->
-    <footer>
-        <p>Designed and Developed by Roy Wang &copy; 2019。<a href="#top">Back to Top</a></p>
-    </footer>
+
+        <!-- ── Right: rotating slideshow ── -->
+        <div class="home-right" aria-hidden="true">
+            <img class="home-slide home-slide--active" src="img/roylake_b.jpg" alt="">
+            <img class="home-slide" src="img/roymountain_b.jpg" alt="">
+            <img class="home-slide" src="img/royocean_b.jpg" alt="">
+            <img class="home-slide" src="img/autraf.jpg" alt="">
+            <img class="home-slide" src="img/aubar.jpg" alt="">
+            <img class="home-slide" src="img/aulav.jpg" alt="">
+            <img class="home-slide" src="img/roysnow.jpg" alt="">
+            <img class="home-slide" src="img/autrain.jpg" alt="">
+            <img class="home-slide" src="img/sing.jpg" alt="">
+        </div>
+
+    </div>
+    <script>
+        (function () {
+            var slides = document.querySelectorAll('.home-slide');
+            var current = 0;
+            setInterval(function () {
+                slides[current].classList.remove('home-slide--active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('home-slide--active');
+            }, 4500);
+        })();
+    </script>
 </body>
 
 </html>

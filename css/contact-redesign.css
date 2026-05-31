@@ -1,0 +1,384 @@
+/* ═══════════════════════════════════════════════
+   Minimalist Monochrome — Contact Page
+   Scoped to .page-contact to avoid polluting
+   other pages that use mystyle.css globals.
+   ═══════════════════════════════════════════════ */
+
+/* ─── Design Tokens ─── */
+:root {
+    --mm-bg:           #ffffff;
+    --mm-fg:           #000000;
+    --mm-muted:        #f5f5f5;
+    --mm-muted-fg:     #525252;
+    --mm-border:       #000000;
+    --mm-border-light: #e5e5e5;
+
+    --mm-font-display: "Playfair Display", Georgia, serif;
+    --mm-font-body:    "Source Serif 4", Georgia, serif;
+    --mm-font-mono:    "JetBrains Mono", "Courier New", monospace;
+}
+
+/* ─── Page Base ─── */
+.page-contact {
+    background:   var(--mm-bg);
+    color:        var(--mm-fg);
+    font-family:  var(--mm-font-body);
+    line-height:  1.625;
+}
+
+/* Subtle horizontal-line texture per design system */
+.page-contact::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        #000 1px,
+        #000 2px
+    );
+    background-size: 100% 4px;
+    opacity: 0.015;
+}
+
+/* ─── Header / Nav ─── */
+.page-contact header {
+    background:    var(--mm-bg);
+    border-bottom: 4px solid var(--mm-fg);
+    position:      relative;
+    z-index:       10;
+    padding:       0;
+}
+
+.page-contact nav {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         1.25rem 3rem;
+    max-width:       72rem;
+    margin:          0 auto;
+}
+
+.page-contact .logo {
+    padding:   0;
+    max-width: 110px;
+    margin:    0;
+    float:     none;
+}
+
+.page-contact .logo img {
+    display:  block;
+    height:   28px;
+    width:    auto;
+    max-width: 100%;
+    filter:   invert(1); /* logo is white on transparent — invert for white bg */
+    margin:   0;
+}
+
+.page-contact nav ul {
+    display:        flex;
+    flex-direction: row;
+    flex-wrap:      wrap;
+    align-items:    center;
+    list-style:     none;
+    padding:        0;
+    margin:         0;
+    text-align:     left;
+}
+
+.page-contact nav ul li {
+    display:    inline-block;
+    padding:    0;
+    border-top: none;
+    line-height: 1;
+}
+
+.page-contact nav ul li a {
+    display:         block;
+    color:           var(--mm-fg);
+    font-family:     var(--mm-font-mono);
+    font-size:       0.68rem;
+    letter-spacing:  0.12em;
+    text-transform:  uppercase;
+    text-decoration: none;
+    padding:         0.5rem 1rem;
+    font-weight:     400;
+    border-bottom:   2px solid transparent;
+    transition:      none;
+}
+
+.page-contact nav ul li a:hover {
+    color:              var(--mm-fg);
+    border-bottom-color: var(--mm-fg);
+    transition:         none;
+}
+
+.page-contact .current-page {
+    color:              var(--mm-fg) !important;
+    border-bottom:      2px solid var(--mm-fg) !important;
+}
+
+/* ─── Skip Links ─── */
+.page-contact .skip-links a {
+    background: var(--mm-fg);
+    color:      var(--mm-bg);
+    top:        -4em;
+}
+
+.page-contact .skip-links a:focus {
+    top: 0;
+}
+
+/* ─── Main ─── */
+.page-contact main {
+    position: relative;
+    z-index:  1;
+}
+
+/* ─── Hero ─── */
+.contact-hero {
+    padding:   5rem 3rem 0;
+    max-width: 72rem;
+    margin:    0 auto;
+}
+
+.contact-overline {
+    font-family:     var(--mm-font-mono);
+    font-size:       0.68rem;
+    letter-spacing:  0.22em;
+    text-transform:  uppercase;
+    color:           var(--mm-muted-fg);
+    margin:          0 0 2.5rem;
+    display:         flex;
+    align-items:     center;
+    gap:             0.85rem;
+}
+
+.contact-overline::after {
+    content:    '';
+    display:    inline-block;
+    width:      48px;
+    height:     1px;
+    background: var(--mm-muted-fg);
+}
+
+.contact-headline {
+    font-family:     var(--mm-font-display);
+    font-size:       clamp(4.5rem, 13vw, 10.5rem);
+    line-height:     0.88;
+    letter-spacing:  -0.04em;
+    margin:          0 0 3.5rem;
+    font-weight:     700;
+}
+
+/* "Connect." is italic — Playfair's italic is its most beautiful form */
+.contact-headline em {
+    font-style: italic;
+    display:    block;
+}
+
+/* Decorative element: small bordered square + thick rule */
+.contact-deco {
+    display:     flex;
+    align-items: center;
+    gap:         0.85rem;
+}
+
+.contact-deco-square {
+    display:      inline-block;
+    width:        10px;
+    height:       10px;
+    border:       2px solid var(--mm-fg);
+    flex-shrink:  0;
+}
+
+.contact-deco-rule {
+    flex:       1;
+    height:     4px;
+    background: var(--mm-fg);
+}
+
+/* ─── Social Link Rows ─── */
+.contact-links {
+    padding: 0;
+}
+
+.contact-link-row {
+    display:         grid;
+    grid-template-columns: 5rem 1fr auto 4rem;
+    align-items:     center;
+    padding:         2.25rem 3rem;
+    border-bottom:   1px solid var(--mm-border);
+    text-decoration: none;
+    color:           var(--mm-fg);
+    background:      var(--mm-bg);
+    transition:      background-color 100ms, color 100ms;
+    cursor:          pointer;
+}
+
+.contact-link-row:first-child {
+    border-top: 1px solid var(--mm-border);
+}
+
+.contact-link-row:hover {
+    background: var(--mm-fg);
+    color:      var(--mm-bg);
+}
+
+.contact-link-row:focus-visible {
+    outline:        3px solid var(--mm-fg);
+    outline-offset: -3px;
+}
+
+.link-index {
+    font-family:    var(--mm-font-mono);
+    font-size:      0.65rem;
+    letter-spacing: 0.1em;
+    color:          var(--mm-muted-fg);
+    align-self:     center;
+    transition:     color 100ms;
+}
+
+.contact-link-row:hover .link-index {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.link-platform {
+    font-family:    var(--mm-font-display);
+    font-size:      clamp(2rem, 5vw, 3.5rem);
+    font-weight:    700;
+    letter-spacing: -0.025em;
+    line-height:    1;
+}
+
+.link-handle {
+    font-family:    var(--mm-font-mono);
+    font-size:      0.7rem;
+    letter-spacing: 0.06em;
+    color:          var(--mm-muted-fg);
+    padding-right:  2rem;
+    transition:     color 100ms;
+}
+
+.contact-link-row:hover .link-handle {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.link-arrow {
+    font-size:    1.25rem;
+    justify-self: end;
+    transition:   transform 100ms;
+    line-height:  1;
+}
+
+.contact-link-row:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* ─── Footer ─── */
+.page-contact footer {
+    background:  var(--mm-bg);
+    border-top:  4px solid var(--mm-fg);
+    padding:     2rem 3rem;
+    text-align:  left;
+    position:    relative;
+    z-index:     1;
+    margin-top:  6rem;
+}
+
+.page-contact footer p {
+    font-family:    var(--mm-font-mono);
+    font-size:      0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color:          var(--mm-muted-fg);
+    margin:         0;
+}
+
+.page-contact footer a {
+    color:           var(--mm-fg);
+    text-decoration: none;
+    border-bottom:   1px solid currentColor;
+}
+
+.page-contact footer a:hover {
+    color: var(--mm-fg);
+}
+
+/* ─── Responsive: tablet ─── */
+@media (max-width: 768px) {
+    .page-contact nav {
+        padding:        0.875rem 1.5rem;
+        flex-direction: column;
+        gap:            0.75rem;
+    }
+
+    .page-contact .logo {
+        max-width: 90px;
+    }
+
+    .page-contact nav ul {
+        justify-content: center;
+    }
+
+    .page-contact nav ul li a {
+        padding: 0.375rem 0.75rem;
+    }
+
+    .contact-hero {
+        padding: 3rem 1.5rem 0;
+    }
+
+    .contact-headline {
+        font-size:     clamp(3.5rem, 15vw, 5.5rem);
+        margin-bottom: 2.25rem;
+    }
+
+    .contact-link-row {
+        grid-template-columns: 3rem 1fr 3rem;
+        padding:               1.75rem 1.5rem;
+    }
+
+    .link-handle {
+        display: none;
+    }
+
+    .link-platform {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+    }
+
+    .page-contact footer {
+        padding:    1.5rem;
+        margin-top: 3rem;
+    }
+}
+
+/* ─── Responsive: mobile ─── */
+@media (max-width: 480px) {
+    .page-contact .logo img {
+        height: 22px;
+    }
+
+    .contact-hero {
+        padding: 2.5rem 1.25rem 0;
+    }
+
+    .contact-overline {
+        margin-bottom: 2rem;
+    }
+
+    .contact-headline {
+        margin-bottom: 2rem;
+    }
+
+    .contact-link-row {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .page-contact footer {
+        padding: 1.25rem;
+    }
+}

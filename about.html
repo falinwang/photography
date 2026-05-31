@@ -5,97 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Monochrome typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:opsz,wght@8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/about-redesign.css">
     <link rel="Shortcut Icon" type="image/x-icon" href="./img/roynana.png" />
     <title>About | Roy Fa-Lin Wang</title>
 </head>
 
-<body>
+<body class="page-about">
     <header id="top">
         <ul class="skip-links">
             <li><a href="#nav">Skip to navigation</a></li>
             <li><a href="#main">Skip to the main content</a></li>
         </ul>
-        <!-- start navigation bar -->
-        <nav id="nav">
+        <nav id="nav" aria-label="Main navigation">
             <div class="logo">
-                <img src="./img/logoroywang.png" alt="title image - Roy Wang" title="">
+                <img src="./img/logoroywang.png" alt="Roy Wang" />
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="works.html">Works</a></li> -->
                 <li><a href="photography.html">Photography</a></li>
-                <li><a class="current-page" href="about.html">About</a></li>
+                <li><a class="current-page" href="about.html" aria-current="page">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main id="main">
-        <div class="main-content main-content-about">
-            <aside>
-                <img src="img/headshot.jpg" alt="Roy Wang's profile picture" class="roysea">
-            </aside>
-            <section class="aboutcontent">
-                <h1>About Me</h1>
-                <h2>Roy Fa-Lin Wang</h2>
-                <h3>"I establish the image of the world by reading and searching, learn people all over the globe with
-                    encounter and separation; by that, I can deeply learn the similarities and differences between
-                    people.”</h3>
-                <p>Roy is a UX student from Taiwan who currently studies Master of Health Informatics program at the
-                    University of Michigan, School of Information and Public Health in Ann Arbor, Michigan. In 2016,
-                    she graduated with a BBA in Business Administration from National Taiwan University of Science and
-                    Technology. Her interests lie in the intersection of user experience (UX) design and research,
-                    front-end development, mHealth, and consumer health informatics. Roy is currently actively
-                    searching for Summer 2019 Internship.</p>
-                <!-- <h2>Roy’s current interests lie in the intersection of front-end development, mHealth, user
-                    experience
-                    research, and consumer health informatics.
-                </h2>
-                <h3>Here are some facts about me: </h3>
-                <ul>
-                    <li>First year graduate student of <a href="https://www.si.umich.edu/content/mhi" target="_blank">Master
-                            of Health
-                            Informatics <i class="abouti fas fa-external-link-alt fa-xs"></i></a> program at University
-                        of
-                        Michigan
-                        School of Information (UMSI) and Public Health specializing in UX engineering</li>
-                    <li>Former Windows & Devices marketing intern at <a href="https://www.facebook.com/Microsoft.Student.Program/"
-                            target="_blank">Microsoft
-                            <i class="abouti fas fa-external-link-alt fa-xs"></i></a></li>
-                    <li>Twenty-four years old, Gemini, a backpacker who traveled through 28 countries</li>
-                    <li>Manages <a href="https://www.facebook.com/roywannago/" target="_blank">"RoyWannago 旅行不需理由" <i
-                                class="about fas fa-external-link-alt fa-xs"></i></a>
-                        facebook
-                        page for traveller</li>
-                </ul>
 
-                <p>
-                    Roy graduated with the Bachelor of Business Administration degree with focusing on marketing at
-                    National Taiwan University of Science and Technology (NTUST). During 2015-2016, Roy worked as a
-                    marketing and sales assistant intern in Microsoft Taiwan, where she operated Windows Facebook page
-                    tasked including publishing interactive contents and analyzing social media data; and she also
-                    served as a Windows lecturer, marketed products to clients—including corporates and
-                    education/government
-                    agencies—by designing employee-training materials and presentations to quickly acquaint clients
-                    with new features.
+    <main id="main">
+
+        <!-- ── Hero ── -->
+        <section class="about-hero" aria-labelledby="about-title">
+            <p class="about-overline">About Me</p>
+            <h1 class="about-headline" id="about-title">
+                Roy
+                <em>Wang.</em>
+            </h1>
+            <div class="about-deco" aria-hidden="true">
+                <span class="about-deco-square"></span>
+                <div class="about-deco-rule"></div>
+            </div>
+        </section>
+
+        <!-- ── Body ── -->
+        <div class="about-body">
+
+            <!-- Photo column -->
+            <div>
+                <figure class="about-photo">
+                    <img src="https://roywannago.com/img/profile.jpg" alt="Roy Wang" />
+                    <figcaption class="about-photo-caption">UX Designer &amp; Photographer</figcaption>
+                </figure>
+            </div>
+
+            <!-- Text column -->
+            <div class="about-text-col">
+                <blockquote class="about-quote">
+                    <span class="about-quote-mark" aria-hidden="true">&ldquo;</span>
+                    <p>I build my understanding of the world through reading and exploring, and I come to know people across the globe through moments of encounter and parting. In doing so, I learn to appreciate both the similarities and the differences between us.</p>
+                </blockquote>
+
+                <div class="about-divider" aria-hidden="true"></div>
+
+                <p class="about-bio">
+                    Roy is a UX designer from Taiwan who studied Master of Health Informatics at the University of Michigan, School of Information and Public Health. Her interests lie in the intersection of UX design and research, front-end development, mHealth, and consumer health informatics.
                 </p>
-                <p>
-                    Roy also had both qualitative and quantitative research experiences. Last year, she served as a
-                    research assistant and assisted in conducting the feasibility study of "My Health Bank" health
-                    information exchange (HIE)
-                    machine-to-machine mechanism for the third-party access at NTUST - Graduate
-                    Institute of Technology Management.
-                </p> -->
-            </section>
+            </div>
+
         </div>
+
     </main>
-    <!-- footer -->
+
     <footer>
-        <p>Designed and Developed by Roy Wang &copy; 2019。<a href="#top">Back to Top</a></p>
+        <p>Designed and Developed by Roy Wang &copy; 2019 &mdash; <a href="#top">Back to Top</a></p>
     </footer>
 </body>
 

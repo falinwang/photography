@@ -5,121 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href='https://fonts.googleapis.com/css?family=Roboto%20Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
+    <!-- Monochrome typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Source+Serif+4:opsz,wght@8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 
     <link rel="Shortcut Icon" type="image/x-icon" href="./img/roynana.png" />
     <link rel="stylesheet" href="css/mystyle.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script src="./scripts/contactform.js"></script>
+    <link rel="stylesheet" href="css/contact-redesign.css">
+
     <title>Contact | Roy Fa-Lin Wang</title>
 </head>
 
-<body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2&appId=279521782699174&autoLogAppEvents=1">
-    </script>
+<body class="page-contact">
     <header id="top">
         <ul class="skip-links">
             <li><a href="#nav">Skip to navigation</a></li>
             <li><a href="#main">Skip to the main content</a></li>
         </ul>
-        <!-- start navigation bar -->
-        <nav id="nav">
+        <nav id="nav" aria-label="Main navigation">
             <div class="logo">
-                <img src="./img/logoroywang.png" alt="title image - Roy Wang" title="">
+                <img src="./img/logoroywang.png" alt="Roy Wang" />
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="works.html">Works</a></li> -->
                 <li><a href="photography.html">Photography</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a class="current-page" href="contact.html">Contact</a></li>
+                <li><a class="current-page" href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main id="main">
-        <div class="main-content main-container">
-            <!-- left side -->
-            <div class="icon-container">
-                <div class="contact-heading">
-                    <h1>Let's Connect</h1>
-                    <h2>Follow me on social media!</h2>
-                </div>
-                <div class="mail-icon icon">
-                    <a href="mailto:falinw@umich.edu?Subject=Hello%20Roy" target="_blank">
-                        <div class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fas fa-envelope fa-stack-1x fa-inverse"></i></div>
-                        <p>falinw@umich.edu</p>
-                    </a>
-                </div>
-                <div class="linkedin-icon icon">
-                    <a href="http://www.linkedin.com/in/falinwang" target="_blank">
-                        <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span>
-                        <p>LinkedIn</p>
-                    </a>
-                </div>
-                <div class="github-icon icon">
-                    <a href="https://github.com/falinwang" target="_blank">
-                        <span class="fa-stack fa-2x fa-tw"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fab fa-github-alt fa-stack-1x fa-inverse"></i></span>
-                        <p>Github</p>
-                    </a>
-                </div>
-                <div class="fb-icon icon">
-                    <a href="https://www.facebook.com/roywannago/" target="_blank">
-                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fab fa-facebook-square fa-stack-1x fa-inverse"></i></span>
-                        <p>Roywannago</p>
-                    </a>
-                </div>
-                <div class="ig-icon icon">
-                    <a href="https://www.instagram.com/royfalinwang/" target="_blank">
-                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fab fa-instagram fa-stack-1x fa-inverse"></i></span>
-                        <p>@royfalinwang</p>
-                    </a>
-                </div>
-                <div class="medium-icon icon">
-                    <a href="https://medium.com/@roywannago" target="_blank">
-                        <span class="fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i
-                                class="fab fa-medium-m fa-stack-1x fa-inverse"></i></span>
-                        <p>Medium</p>
-                    </a>
-                </div>
 
+        <!-- ── Hero ── -->
+        <section class="contact-hero" aria-labelledby="contact-title">
+            <p class="contact-overline">Reach Out</p>
+            <h1 class="contact-headline" id="contact-title">
+                Let's
+                <em>Connect.</em>
+            </h1>
+            <!-- Decorative: small bordered square + thick rule -->
+            <div class="contact-deco" aria-hidden="true">
+                <span class="contact-deco-square"></span>
+                <div class="contact-deco-rule"></div>
             </div>
-            <!-- right side -->
-            <div class="contactform-container">
-                <h2>Like My Facebook Page!</h2>
-                <!-- <h3>RoyWannago 旅行不需理由</h3> -->
-                <!-- Facebook Button -->
-                <div class="fb-like" data-href="https://www.facebook.com/roywannago" data-layout="button_count"
-                    data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+        </section>
 
-                <!-- InstaWidget -->
-                <h2>Follow My Instagram!</h2>
+        <!-- ── Social Links ── -->
+        <section class="contact-links" aria-label="Social media links">
+            <a class="contact-link-row"
+               href="http://www.linkedin.com/in/falinwang"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="link-index" aria-hidden="true">01</span>
+                <span class="link-platform">LinkedIn</span>
+                <span class="link-handle">/in/falinwang</span>
+                <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="contact-link-row"
+               href="https://medium.com/@roywannago"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="link-index" aria-hidden="true">02</span>
+                <span class="link-platform">Medium</span>
+                <span class="link-handle">@roywannago</span>
+                <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="contact-link-row"
+               href="https://github.com/falinwang"
+               target="_blank"
+               rel="noopener noreferrer">
+                <span class="link-index" aria-hidden="true">03</span>
+                <span class="link-platform">GitHub</span>
+                <span class="link-handle">/falinwang</span>
+                <span class="link-arrow" aria-hidden="true">→</span>
+            </a>
+        </section>
 
-                <div>
-                    <a href="https://instawidget.net/v/user/royfalinwang"
-                        id="link-2d870df9a54b09d26e52a5314229a17a8411d7cb60ea17b97be03537aa9569e4">@royfalinwang</a>
-                    <script
-                        src="https://instawidget.net/js/instawidget.js?u=2d870df9a54b09d26e52a5314229a17a8411d7cb60ea17b97be03537aa9569e4&width=400px">
-                    </script>
-                </div>
-            </div>
-        </div>
     </main>
-    <!-- footer -->
+
     <footer>
-        <p>Designed and Developed by Roy Wang &copy; 2019。<a href="#top">Back to Top</a></p>
+        <p>Designed and Developed by Roy Wang &copy; 2019 &mdash; <a href="#top">Back to Top</a></p>
     </footer>
 </body>
 

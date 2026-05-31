@@ -1,0 +1,375 @@
+/* ═══════════════════════════════════════════════
+   Minimalist Monochrome — Home Page
+   Split-screen: typography left / photo right
+   ═══════════════════════════════════════════════ */
+
+/* ─── Page reset for full-screen layout ─── */
+.page-home {
+    overflow:   hidden;
+    height:     100vh;
+    background: #ffffff;
+    color:      #000000;
+    font-family: "Source Serif 4", Georgia, serif;
+}
+
+/* Subtle horizontal-line texture */
+.page-home::before {
+    content:        '';
+    position:       fixed;
+    inset:          0;
+    pointer-events: none;
+    z-index:        0;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        #000 1px,
+        #000 2px
+    );
+    background-size: 100% 4px;
+    opacity:         0.015;
+}
+
+/* ─── Split wrapper ─── */
+.home-split {
+    display:               grid;
+    grid-template-columns: 45fr 55fr;
+    height:                100vh;
+    position:              relative;
+    z-index:               1;
+}
+
+/* ─── Left panel ─── */
+.home-left {
+    display:        flex;
+    flex-direction: column;
+    border-right:   4px solid #000000;
+    overflow-y:     auto;
+    position:       relative;
+    z-index:        2;
+}
+
+/* ─── Nav (inside left panel) ─── */
+.page-home header {
+    background:    #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding:       0;
+    flex-shrink:   0;
+}
+
+.page-home nav {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         1.1rem 2.5rem;
+}
+
+.page-home .logo {
+    padding:   0;
+    max-width: 90px;
+    margin:    0;
+    float:     none;
+}
+
+.page-home .logo img {
+    display:   block;
+    height:    24px;
+    width:     auto;
+    max-width: 100%;
+    filter:    invert(1);
+    margin:    0;
+}
+
+.page-home nav ul {
+    display:        flex;
+    flex-direction: row;
+    flex-wrap:      wrap;
+    align-items:    center;
+    list-style:     none;
+    padding:        0;
+    margin:         0;
+}
+
+.page-home nav ul li {
+    display:    inline-block;
+    padding:    0;
+    border-top: none;
+    line-height: 1;
+}
+
+.page-home nav ul li a {
+    display:         block;
+    color:           #000000;
+    font-family:     "JetBrains Mono", "Courier New", monospace;
+    font-size:       0.62rem;
+    letter-spacing:  0.12em;
+    text-transform:  uppercase;
+    text-decoration: none;
+    padding:         0.4rem 0.875rem;
+    font-weight:     400;
+    border-bottom:   2px solid transparent;
+    transition:      none;
+}
+
+.page-home nav ul li a:hover {
+    color:               #000000;
+    border-bottom-color: #000000;
+}
+
+.page-home .current-page {
+    color:         #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+/* ─── Skip links ─── */
+.page-home .skip-links a {
+    background: #000000;
+    color:      #ffffff;
+    top:        -4em;
+}
+
+.page-home .skip-links a:focus {
+    top: 0;
+}
+
+/* ─── Main content (vertically centered in left panel) ─── */
+.home-main {
+    flex:            1;
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    padding:         3rem 2.5rem 2rem;
+}
+
+.home-overline {
+    font-family:    "JetBrains Mono", "Courier New", monospace;
+    font-size:      0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color:          #525252;
+    margin:         0 0 2rem;
+    display:        flex;
+    align-items:    center;
+    gap:            0.75rem;
+}
+
+.home-overline::after {
+    content:    '';
+    display:    inline-block;
+    width:      36px;
+    height:     1px;
+    background: #525252;
+}
+
+.home-headline {
+    font-family:    "Playfair Display", Georgia, serif;
+    font-size:      clamp(4rem, 8.5vw, 8rem);
+    line-height:    0.88;
+    letter-spacing: -0.04em;
+    margin:         0 0 2.5rem;
+    font-weight:    700;
+}
+
+.home-headline em {
+    font-style: italic;
+    display:    block;
+}
+
+/* Decorative element */
+.home-deco {
+    display:     flex;
+    align-items: center;
+    gap:         0.75rem;
+    margin-bottom: 2.25rem;
+}
+
+.home-deco-square {
+    display:     inline-block;
+    width:       8px;
+    height:      8px;
+    border:      2px solid #000000;
+    flex-shrink: 0;
+}
+
+.home-deco-rule {
+    flex:       1;
+    height:     3px;
+    background: #000000;
+}
+
+/* Role label */
+.home-role {
+    font-family:    "JetBrains Mono", "Courier New", monospace;
+    font-size:      0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin:         0 0 1rem;
+    color:          #000000;
+}
+
+/* Tagline */
+.home-tagline {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size:   0.9375rem;
+    line-height: 1.65;
+    color:       #525252;
+    margin:      0 0 2.5rem;
+    max-width:   28rem;
+}
+
+/* ─── Section nav links ─── */
+.home-nav-links {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #000000;
+}
+
+.home-nav-links a {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         0.875rem 0.5rem;
+    border-bottom:   1px solid #000000;
+    text-decoration: none;
+    color:           #000000;
+    font-family:     "Playfair Display", Georgia, serif;
+    font-size:       1.25rem;
+    font-weight:     700;
+    letter-spacing:  -0.02em;
+    background:      #ffffff;
+    transition:      background-color 100ms, color 100ms;
+}
+
+.home-nav-links a:hover {
+    background: #000000;
+    color:      #ffffff;
+}
+
+.home-nav-links a span {
+    font-size:  1rem;
+    transition: transform 100ms;
+    flex-shrink: 0;
+}
+
+.home-nav-links a:hover span {
+    transform: translateX(4px);
+}
+
+/* ─── Footer (pinned to bottom of left panel) ─── */
+.page-home footer {
+    background:  #ffffff;
+    border-top:  1px solid #e5e5e5;
+    padding:     1rem 2.5rem;
+    flex-shrink: 0;
+    position:    relative;
+    z-index:     1;
+    margin-top:  0;
+    text-align:  left;
+}
+
+.page-home footer p {
+    font-family:    "JetBrains Mono", "Courier New", monospace;
+    font-size:      0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color:          #a0a0a0;
+    margin:         0;
+}
+
+.page-home footer a {
+    color:           #525252;
+    text-decoration: none;
+    border-bottom:   1px solid currentColor;
+}
+
+/* ─── Right panel: slideshow ─── */
+.home-right {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-slide {
+    position:       absolute;
+    inset:          0;
+    width:          100%;
+    height:         100%;
+    object-fit:     cover;
+    object-position: center;
+    display:        block;
+    border-radius:  0;
+    filter:         grayscale(100%);
+    opacity:        0;
+    transition:     opacity 1.2s ease, filter 800ms ease;
+}
+
+.home-slide--active {
+    opacity: 1;
+}
+
+.home-right:hover .home-slide {
+    filter: grayscale(0%);
+}
+
+/* ─── Responsive: tablet ─── */
+@media (max-width: 900px) {
+    .page-home {
+        overflow:   auto;
+        height:     auto;
+    }
+
+    .home-split {
+        grid-template-columns: 1fr;
+        grid-template-rows:    45vh auto;
+        height:                auto;
+    }
+
+    /* Photo goes first on mobile */
+    .home-right {
+        order:  -1;
+        height: 45vh;
+    }
+
+    .home-left {
+        border-right:  none;
+        border-bottom: none;
+    }
+
+    .page-home header {
+        border-bottom: 4px solid #000000;
+    }
+
+    .page-home nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .home-main {
+        padding:         2.5rem 1.5rem 1.5rem;
+        justify-content: flex-start;
+    }
+
+    .home-headline {
+        font-size: clamp(3.5rem, 14vw, 6rem);
+    }
+
+    .page-home footer {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-right {
+        height: 40vh;
+    }
+
+    .home-main {
+        padding: 2rem 1.25rem 1.25rem;
+    }
+
+    .home-headline {
+        font-size: clamp(3rem, 16vw, 4.5rem);
+    }
+
+    .page-home footer {
+        padding: 0.875rem 1.25rem;
+    }
+}
